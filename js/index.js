@@ -2,17 +2,11 @@
 
 
 
-
-
-
-
-
 $('#close').on('click', () => {
 
     $('nav').animate({ width: '0%', padding: '0' }, (1000));
     $('main').animate({ marginLeft: '0' })
     document.body.style.overflow = 'auto'
-
 
 })
 
@@ -28,8 +22,8 @@ function checkMedia() {
     if (window.matchMedia('(max-width:768px)').matches) {
         // Navbar Width 100% On Mobile Screen
         $('nav').animate({ width: '100%', padding: '1.5rem' });
-        document.getElementsByTagName('nav')[0].style.textAlign='center';
-        
+        document.getElementsByTagName('nav')[0].style.textAlign = 'center';
+
         // To Remove Scroll When User Open Navbar On Mobile Media
         document.body.style.overflow = 'hidden'
         return true;
@@ -39,12 +33,6 @@ function checkMedia() {
         $('main').animate({ marginLeft: '20rem' })
     }
 }
-
-
-function closeCheackMedia(){
-
-}
-// $(window).resize(checkMedia)
 
 
 $('.question').on('click', (e) => {
@@ -62,9 +50,6 @@ $('.question').on('click', (e) => {
     }
 
 })
-
-
-
 
 
 
@@ -113,4 +98,23 @@ function mince() {
 
 mince()
 
-// $('nav').innerWidth()
+let textCharLimit = 100;
+let characterRemaining = textCharLimit;
+
+// تحديث النص المتبقي عند تحميل الصفحة
+$('#messageTextChar').html(characterRemaining);
+
+$('#messageText').on('input', (e) => {
+    let currentLength = e.target.value.length;
+
+    // حساب عدد الأحرف المتبقية
+    characterRemaining = textCharLimit - currentLength;
+    $('#messageTextChar').html(characterRemaining);
+
+    // منع تجاوز عدد الأحرف (بدون الحاجة لتغيير maxLength)
+    if (characterRemaining < 0) {
+        e.target.value = e.target.value.substring(0, textCharLimit);
+        characterRemaining = 0;
+        $('#messageTextChar').html(characterRemaining);
+    }
+});
