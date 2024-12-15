@@ -32,22 +32,20 @@
     <main>
 
         <section id="home" class="home bg-dark-subtle">
-            <div class="container-fluid ">
+            <div class="container-fluid position-relative ">
+
+                <div id="openBtn" class="open position-absolute top-50 translate-middle-y ">
+                    <i class="fa-solid fs-1 fa-bars d-inline-block"></i>
+                    <p class="m-0 fs-1 d-inline-block">open</p>
+                </div>
 
                 <div class="homeplus d-flex justify-content-center align-items-center">
 
-                    <div id="openBtn" class="open ">
-                        <i class="fa-solid fs-1 fa-bars d-inline-block"></i>
-                        <p class="m-0 fs-1 d-inline-block">open</p>
+                    <div class="tittle text-center w-100">
+                        <h1 class="display-2 fw-bold">Egyption Party</h1>
+                        <p class="lead">Let's Have Fun</p>
                     </div>
-
-                    <div class="home-content w-100 d-flex justify-content-center align-items-center gap-3">
-                        <div class="tittle text-center">
-                            <h1 class="display-2 fw-bold">Egyption Party</h1>
-                            <p class="lead">Let's Have Fun</p>
-                        </div>
-
-                    </div>
+                    
                 </div>
 
 
@@ -209,7 +207,7 @@
                             <textarea name="message" id="messageText" placeholder="Enter Message"
                                 class="form-control w-100"></textarea>
                             <p><span id="messageTextChar"></span> Character Reamining</p>
-                            <button class="btn btn-danger">Send Message</button>
+                            <button class="btn sendBtn">Send Message</button>
                         </form>
                     </div>
 
@@ -217,6 +215,13 @@
             </div>
         </section>
 
+
+
+        <footer>
+            <div class="d-center p-3">
+                <p class="m-0">© 2024 Designed and developed by <a href="https://www.linkedin.com/in/moamenmokhtar-co/" target="_blank" class="text-decoration-none">Moamen Mokhtar</a></p>
+            </div>
+        </footer>
 
 
     </main>

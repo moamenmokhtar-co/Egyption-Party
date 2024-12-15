@@ -12,8 +12,9 @@
 
 section.home {
     min-height: 75vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(117, 19, 93, 0.73)),
-        url('../images/events-heavenly-header.jpg');
+    background-image: linear-gradient(to bottom, #312b7866, #312b787a),
+        url('../images/party-2.jpg');
+        /* background-image: url(../images/party-2.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +55,7 @@ nav a::after {
     bottom: 0;
     /* right: 0; */
     /* width: 100%; */
-    background-color: #93477F;
+    background-color: #dd355b;
     height: 2px;
     /* z-index: 222; */
     transition: 1s;
@@ -76,6 +77,12 @@ nav a:hover::after{
     /* padding: 20px; */
 }
 
+@media (max-width:768px) {
+    #openBtn {
+        top:20% !important
+    }
+}
+
 #openBtn i {
     vertical-align: sub;
 }
@@ -88,7 +95,11 @@ nav a:hover::after{
 
 .question {
     cursor: pointer;
-    background-color: rgba(117, 19, 93, 0.797);
+    background-color: #312b78e8;
+}
+.question p{
+
+    color: #ffffff;
 }
 
 .answer {
@@ -100,7 +111,7 @@ nav a:hover::after{
 
 
 .discount {
-    background-image: linear-gradient(to bottom, rgba(117, 19, 93, 0.797), rgba(117, 19, 93, 0.797)), url(../images/invitation-2508607__340.jpg);
+    background-image: linear-gradient(to bottom, #312b7866, #312b7866), url(../images/party-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -166,4 +177,36 @@ form textarea {
 
 form p span {
     color: var(--main-color);
+}
+
+.sendBtn {
+    background-color: #383185;
+    color: #fff;
+}
+
+.sendBtn:hover {
+    background-color: #211b5e;
+    color: #fff;
+}
+
+
+footer div {
+        background-color: #E9D5B3;
+}
+footer div a {
+    color: #dd355b;
+    position: relative;
+}
+footer div a:after {
+    content: '';
+    background-color: #dd355b;
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+}
+footer div a:hover::after {
+    height: 2px;
+
 }

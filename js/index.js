@@ -42,11 +42,9 @@ $('.question').on('click', (e) => {
     $('.answer').slideUp(1000)
 
     if ($(answer).innerHeight() == 0) {
+        
         $(answer).slideDown(1000)
 
-    }
-    else {
-        $(answer).slideUp(1000)
     }
 
 })
